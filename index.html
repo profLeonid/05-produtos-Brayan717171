@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Estoque Digital</title>
+</head>
+<body class="bg-[#fafafa] text-slate-700 min-h-screen font-sans antialiased">
+
+    <div class="max-w-5xl mx-auto px-4 py-10">
+        
+        <header class="mb-10 flex justify-between items-end border-b border-red-100 pb-6">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-900 tracking-tight">
+                    Estoque<span class="text-red-600">Digital</span>
+                </h1>
+                <p class="text-sm text-slate-400 italic">Controle de entrada e valores</p>
+            </div>
+           
+        </header>
+
+        <section class="mb-10">
+            <div class="bg-white p-2 rounded-xl shadow-sm border border-slate-200 flex flex-col md:flex-row gap-2">
+                <input 
+                    type="text" 
+                    placeholder="Descrição do produto" 
+                    id="produtoNome"
+                    class="flex-1 px-4 py-2.5 rounded-lg bg-slate-50 outline-none focus:bg-white focus:ring-2 focus:ring-red-100 transition-all text-sm"
+                >
+                <input 
+                    type="number" 
+                    placeholder="Qtd" 
+                    id="quantidadeProduto"
+                    class="w-full md:w-28 px-4 py-2.5 rounded-lg bg-slate-50 outline-none focus:bg-white focus:ring-2 focus:ring-red-100 transition-all text-sm"
+                >
+                <button 
+                    onclick="adicionarProduto()"
+                    class="bg-red-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-red-700 transition-all active:scale-95 text-sm cursor-pointer shadow-sm shadow-red-200"
+                >
+                    Adicionar Item
+                </button>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-slate-50/50 border-b border-slate-100 text-slate-500 font-semibold">
+                            <th class="px-6 py-4 text-sm">Ref.</th>
+                            <th class="px-6 py-4 text-sm">Descrição</th>
+                            <th class="px-6 py-4 text-sm text-center">Qtd</th>
+                            <th class="px-6 py-4 text-sm text-right">Unitário</th>
+                            <th class="px-6 py-4 text-sm text-right">Total</th>
+                            <th class="px-6 py-4 text-sm text-right">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabela" class="divide-y divide-slate-50 text-slate-600">
+                        </tbody>
+                </table>
+            </div>
+
+            <div id="listaVazia" class="hidden p-12 text-center border-t border-slate-50">
+                <p class="text-slate-400 text-sm">Nenhum produto na lista.</p>
+            </div>
+        </section>
+        
+    </div>
+
+</body>
+</html>
