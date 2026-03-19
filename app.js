@@ -1,7 +1,7 @@
 'use strict'
 
 
-// 1. Nossa "Biblioteca" de preços variáveis
+// 1. Nossa "Biblioteca" de preços 
 const PRECOS_BASE = {
 
     // --- LINHA IPHONE 16 (LANÇAMENTO) ---
