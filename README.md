@@ -6,7 +6,7 @@
 
 ## 🖥️ Preview
 
-![EstoqueDigital Preview](https://i.imgur.com/placeholder.png)
+![EstoqueDigital Preview](./Captura%20de%20tela%202026-03-19%20111733.png)
 
 > Interface limpa com tabela de produtos, cálculo automático de totais e remoção de itens.
 
